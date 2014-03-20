@@ -1,6 +1,6 @@
 {
   "name": "blerg",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A Blerg (blerg.cc) api client",
   "main": "index.js",
   "scripts": {
