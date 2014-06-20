@@ -1,4 +1,4 @@
-var http = require('http');
+var https = require('https');
 var qs = require('querystring');
 var noop = require("node-noop").noop;
 
@@ -31,7 +31,7 @@ function handleresp(cb) {
 }
 
 Blerg.prototype._get = function(url, cb) {
-  var req = http.request({
+  var req = https.request({
     hostname: 'blerg.cc',
     port: 80,
     path: url,
@@ -55,9 +55,9 @@ Blerg.prototype._get = function(url, cb) {
 
 Blerg.prototype._post = function(url, body, cb) {
   var query = qs.stringify(body);
-  var req = http.request({
+  var req = https.request({
     hostname: 'blerg.cc',
-    port: 80,
+    port: 443,
     path: url,
     method: 'POST'
   }, function(res) {
