@@ -33,7 +33,7 @@ function handleresp(cb) {
 Blerg.prototype._get = function(url, cb) {
   var req = https.request({
     hostname: 'blerg.cc',
-    port: 80,
+    port: 443,
     path: url,
     method: 'GET'
   }, function(res) {
